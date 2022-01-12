@@ -44,8 +44,8 @@ scikit_learn==1.0.2
 - [ ] Scheldule model re-trains with Kubernetes while maintaining zero down time.
 
 ### References for Kubernetes deployment
-https://kubernetes.io/docs/tutorials/kubernetes-basics/
-https://thecodinginterface.com/blog/flask-rest-api-minikube/
+https://kubernetes.io/docs/tutorials/kubernetes-basics/  
+https://thecodinginterface.com/blog/flask-rest-api-minikube/  
 https://blog.dataiku.com/how-to-perform-basic-ml-serving-with-python-docker-kubernetes
 
 
