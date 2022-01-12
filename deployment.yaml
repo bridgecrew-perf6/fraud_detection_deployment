@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cc-fraud-deploy
+  labels:
+    type: restapi
+spec:
+  selector:
+    matchLabels:
+      app: cc-fraud
+  replicas: 3
+  template:
+    metadata:
+      name: cc-fraud-tmpl
+      labels:
+        app: cc-fraud
+    spec:
+      containers:
+        - name: cc-fraud
+          image: cc-fraud:0.2
+          command: ["python3", "app.py"]
+          ports:
+            - containerPort: 8080
