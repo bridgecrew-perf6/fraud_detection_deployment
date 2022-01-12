@@ -1,7 +1,7 @@
 # Fraud Detection classification with Kubernetes files for deployment
 
 ### Information
-In this project I used a classic dataset for Fraud Detection that can be found [here](https://www.kaggle.com/mlg-ulb/creditcardfraud). I used a Logistic regressiion model for classification, RESTApi, Docker and Kubernetes for deployment.  
+In this project I used a classic dataset for Fraud Detection that can be found [here](https://www.kaggle.com/mlg-ulb/creditcardfraud). I used a Logistic regression model for classification, RESTApi, Docker and Kubernetes for deployment.  
 <b>NOTE:</b> The Dockerfile also copies the [train.py](https://github.com/) file, which is not used. I included it regardless for future work implementation (see Future Work).
 
 
