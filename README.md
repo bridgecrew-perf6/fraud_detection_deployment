@@ -41,7 +41,7 @@ pandas==1.1.5
 scikit_learn==1.0.2  
 
 ### Future Work:
-- [ ] Scheldule model re-trains with Kubernetes while maintaining zero down time.
+- [x] Scheldule model re-trains with Kubernetes while maintaining zero down time.
 
 ### References for Kubernetes deployment
 https://kubernetes.io/docs/tutorials/kubernetes-basics/  
