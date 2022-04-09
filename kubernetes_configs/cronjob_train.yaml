@@ -1,0 +1,24 @@
+# Schedules model retrains every 5 minutes
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: train-cronjob
+spec:
+  schedule: "*/5 * * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: train-container
+            image: trainer:0.2
+            command: ["python3",  "train.py"]
+            volumeMounts:
+              - name: nfs-direct-volume
+                mountPath: "/mnt/sharedfolder"
+          restartPolicy: Never
+          volumes:
+            - name: nfs-direct-volume
+              persistentVolumeClaim:
+               claimName: nfs-direct-pvc
+      backoffLimit: 0

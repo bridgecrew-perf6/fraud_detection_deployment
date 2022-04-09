@@ -1,7 +1,7 @@
 import logging
 from flask import Flask, request, jsonify
 
-from model import LRModel
+from trainer_deployment_files.model import LRModel
 
 logging.basicConfig(level=logging.DEBUG)
 app = Flask(__name__)

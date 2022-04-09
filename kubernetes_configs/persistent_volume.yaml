@@ -1,0 +1,16 @@
+# Instead of doing the shared host volume, I directly set the nfs serer path.
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: nfs-direct-pv
+spec:
+  storageClassName: nfs-direct
+  capacity:
+    storage: 100Mi
+  accessModes:
+    - ReadWriteMany
+  nfs:
+    path: /mnt/sharedfolder
+    server: 192.168.56.2
+#  hostPath:
+#    path: "/mnt/sharedfolder"
